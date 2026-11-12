@@ -1,0 +1,16 @@
+{
+  "name": "jira-test-case-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "vite build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  }
+}

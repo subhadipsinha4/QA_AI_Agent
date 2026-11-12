@@ -1,0 +1,19 @@
+# macOS/editor noise
+.DS_Store
+
+# Secrets and local configuration
+**/.env
+**/.env.*
+!**/.env.example
+**/server/settings.json
+**/.tmp/
+
+# Dependencies, generated output, and local stores
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/dist/
+**/chroma_db/
+**/coverage/
+*.py[cod]
+*.log
