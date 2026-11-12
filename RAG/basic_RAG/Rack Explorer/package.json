@@ -1,0 +1,22 @@
+{
+  "name": "vwo-basic-rag-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"npm:server\" \"npm:client\"",
+    "server": ".venv/bin/uvicorn backend.main:app --reload --host 127.0.0.1 --port 8000",
+    "client": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "start": ".venv/bin/uvicorn backend.main:app --host 127.0.0.1 --port 8000"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "^9.2.1",
+    "lucide-react": "^0.468.0",
+    "vite": "latest",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
+
