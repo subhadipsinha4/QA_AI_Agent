@@ -4,13 +4,13 @@ A React + FastAPI application demonstrating a local, end-to-end retrieval-augmen
 
 ## Pipeline
 
-1. FastAPI reads `Product Requirements Document (PRD) VWO.com.pdf` with PyMuPDF and splits text into paragraph-aware chunks with configurable overlap.
+1. FastAPI reads `../data/Product Requirements Document (PRD) VWO.com.pdf` with PyMuPDF and splits text into paragraph-aware chunks with configurable overlap.
 2. `nomic-ai/nomic-embed-text-v1.5` creates normalized document vectors. Query vectors use Nomic's `search_query:` prefix; stored passages use `search_document:`.
 3. Vectors and page/source metadata are persisted in local ChromaDB at `chroma_db/`.
 4. Each query searches by cosine similarity and returns the four most relevant passages, including page numbers and similarity scores.
 5. Groq generates a grounded answer using those passages. The UI displays both the answer and its retrieved context.
 
-The supplied PDF is already in the expected `data/` location. On first backend startup the index is built automatically. Subsequent startups reuse the local index; select **Re-index document** after changing the PDF.
+The source PDF lives at `RAG/basic_RAG/data/Product Requirements Document (PRD) VWO.com.pdf`, outside this app package. On first backend startup the index is built automatically. Subsequent startups reuse the local index; select **Re-index document** after changing the source PDF.
 
 ## Setup
 
