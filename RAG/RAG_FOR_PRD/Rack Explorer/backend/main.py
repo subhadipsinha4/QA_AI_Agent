@@ -18,7 +18,7 @@ from sentence_transformers import SentenceTransformer
 
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
-PDF_PATH = ROOT / "Product Requirements Document (PRD) VWO.com.pdf"
+PDF_PATH = ROOT.parent / "data" / "Product Requirements Document (PRD) VWO.com.pdf"
 DB_PATH = ROOT / os.getenv("CHROMA_PATH", "./chroma_db")
 if not DB_PATH.is_absolute():
     DB_PATH = (ROOT / DB_PATH).resolve()
